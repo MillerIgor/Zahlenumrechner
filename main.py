@@ -26,23 +26,14 @@ while True:
                 user_wahl1 = input("Ihre Wahl: ")
                 # Durchführung der Konvertierung nach Wahl des Benutzers
                 if user_wahl1.lower() == 'd':
-                    try:
-                        print(f"Ergebnis: {to_dec(zahl, 16)}")
-                        input("Weiter mit der Eingabe-Taste")
-                    except:
-                        print("\nÜberprüfen Sie Ihre Eingabe!\n")
+                    print(f"Ergebnis: {to_dec(zahl, 16)}")
+                    input("Weiter mit der Eingabe-Taste")
                 elif user_wahl1.lower() == 'o':
-                    try:
-                        print(f"Ergebnis: {dec_to(to_dec(zahl, 16), 8)}")
-                        input("Weiter mit der Eingabe-Taste")
-                    except:
-                        print("\nÜberprüfen Sie Ihre Eingabe!\n")
+                    print(f"Ergebnis: {dec_to(to_dec(zahl, 16), 8)}")
+                    input("Weiter mit der Eingabe-Taste")
                 elif user_wahl1.lower() == 'b':
-                    try:
-                        print(f"Ergebnis: {dec_to(to_dec(zahl, 16), 2)}")
-                        input("Weiter mit der Eingabe-Taste")
-                    except:
-                        print("\nÜberprüfen Sie Ihre Eingabe!\n")
+                    print(f"Ergebnis: {dec_to(to_dec(zahl, 16), 2)}")
+                    input("Weiter mit der Eingabe-Taste")
                 else:
                     print("\nPassen Sie Ihre Eingabe auf!\n")
                     continue
@@ -65,17 +56,11 @@ while True:
                 user_wahl1 = input("Ihre Wahl: ")
                 # Durchführung der Konvertierung nach Wahl des Benutzers
                 if user_wahl1 == 'h':
-                    try:
-                        print(f"Ergebnis: {dec_to(zahl, 16)}")
-                        input("Weiter mit der Eingabe-Taste")
-                    except:
-                        print("\nÜberprüfen Sie Ihre Eingabe!\n")
+                    print(f"Ergebnis: {dec_to(zahl, 16)}")
+                    input("Weiter mit der Eingabe-Taste")
                 elif user_wahl1.lower() == 'o':
-                    try:
-                        print(f"Ergebnis: {dec_to(zahl, 8)}")
-                        input("Weiter mit der Eingabe-Taste")
-                    except:
-                        print("\nÜberprüfen Sie Ihre Eingabe!\n")
+                    print(f"Ergebnis: {dec_to(zahl, 8)}")
+                    input("Weiter mit der Eingabe-Taste")
                 elif user_wahl1.lower() == 'b':
                     print(f"Ergebnis: {dec_to(zahl, 2)}")
                     input("Weiter mit der Eingabe-Taste")
@@ -101,23 +86,14 @@ while True:
                 user_wahl1 = input("Ihre Wahl: ")
                 # Durchführung der Konvertierung nach Wahl des Benutzers
                 if user_wahl1 == 'h':
-                    try:
-                        print(f"Ergebnis: {dec_to(to_dec(zahl, 8), 16)}")
-                        input("Weiter mit der Eingabe-Taste")
-                    except:
-                        print("Überprüfen Sie Ihre Eingabe!")
+                    print(f"Ergebnis: {dec_to(to_dec(zahl, 8), 16)}")
+                    input("Weiter mit der Eingabe-Taste")
                 elif user_wahl1.lower() == 'd':
-                    try:
-                        print(f"Ergebnis: {to_dec(zahl, 8)}")
-                        input("Weiter mit der Eingabe-Taste")
-                    except:
-                        print("\nÜberprüfen Sie Ihre Eingabe!\n")
+                    print(f"Ergebnis: {to_dec(zahl, 8)}")
+                    input("Weiter mit der Eingabe-Taste")
                 elif user_wahl1.lower() == 'b':
-                    try:
-                        print(f"Ergebnis: {dec_to(to_dec(zahl, 8), 2)}")
-                        input("Weiter mit der Eingabe-Taste")
-                    except:
-                        print("\nÜberprüfen Sie Ihre Eingabe!\n")
+                    print(f"Ergebnis: {dec_to(to_dec(zahl, 8), 2)}")
+                    input("Weiter mit der Eingabe-Taste")
                 else:
                     print("\nPassen Sie Ihre Eingabe auf!")
                     continue
@@ -141,23 +117,14 @@ while True:
                 user_wahl1 = input("Ihre Wahl: ")
                 # Durchführung der Konvertierung nach Wahl des Benutzers
                 if user_wahl1 == 'h':
-                    try:
-                        print(f"Ergebnis: {dec_to(to_dec(zahl, 2), 16)}")
-                        input("Weiter mit der Eingabe-Taste")
-                    except:
-                        print("\nÜberprüfen Sie Ihre Eingabe!\n")
+                    print(f"Ergebnis: {dec_to(to_dec(zahl, 2), 16)}")
+                    input("Weiter mit der Eingabe-Taste")
                 elif user_wahl1.lower() == 'o':
-                    try:
-                        print(f"Ergebnis: {dec_to(to_dec(zahl, 2), 8)}")
-                        input("Weiter mit der Eingabe-Taste")
-                    except:
-                        print("\nÜberprüfen Sie Ihre Eingabe!")
+                    print(f"Ergebnis: {dec_to(to_dec(zahl, 2), 8)}")
+                    input("Weiter mit der Eingabe-Taste")
                 elif user_wahl1.lower() == 'd':
-                    try:
-                        print(f"Ergebnis: {to_dec(zahl, 2)}")
-                        input("Weiter mit der Eingabe-Taste")
-                    except:
-                        print("\nÜberprüfen Sie Ihre Eingabe!\n")
+                    print(f"Ergebnis: {to_dec(zahl, 2)}")
+                    input("Weiter mit der Eingabe-Taste")
                 else:
                     print("\nPassen Sie Ihre Eingabe auf!\n")
                     continue
