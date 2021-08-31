@@ -7,21 +7,30 @@ def dec_to(num_to_change, to_system_base):
 
         :return: (str): umgewandelte Zahl
     """
-    x = num_to_change
-    y = int(to_system_base)
+    x = int(num_to_change)
+    # zuweisen die Zeichenkette, die das Ergebnis der Konvertierung erhalten soll
     result = ''
+    # ein Wörterbuch zuweisen, um die Ziffern in der umzuwandelnden Zahl durch Buchstaben als Ergebnis zu ersetzen
     numbers_to_letters = {10: 'a', 11: 'b', 12: 'c', 13: 'd', 14: 'e', 15: 'f'}
     while x != 0:
-        if y > 10:
-            if x % y > 9:
-                result = numbers_to_letters[x % y].upper() + result
-                x = x // y
+        # prüfen ob die Zielzahlsystem hat Basis größe als 10, damit die Umgewandelte Zahl richtig dargestel wurde
+        if to_system_base > 10:
+            # prüfen, ob die Ziffer in einen Buchstaben ersetzt werden soll
+            if x % to_system_base > 9:
+                # fügen die umgewandelte Ziffer an das Ende der umgewandelten Zahl an.
+                result = numbers_to_letters[x % to_system_base].upper() + result
+                # dividieren die Zahl durch basis des Zahlensystems, laut des Algorithmus
+                x = x // to_system_base
             else:
-                result = str(x % y) + result
-                x = x // y
+                # fügen die umgewandelte Ziffer an das Ende der umgewandelten Zahl an.
+                result = str(x % to_system_base) + result
+                # dividieren die Zahl durch basis des Zahlensystems, laut des Algorithmus
+                x = x // to_system_base
         else:
-            result = str(x % y) + result
-            x = x // y
+            # fügen die umgewandelte Ziffer an das Ende der umgewandelten Zahl an.
+            result = str(x % to_system_base) + result
+            # dividieren die Zahl durch basis des Zahlensystems, laut des Algorithmus
+            x = x // to_system_base
     return result
 
 
@@ -33,19 +42,23 @@ def to_dec(num_to_change, system_base):
 
         :return (str): umgewandelte Zahl
     """
-    x = system_base
-    y = len(num_to_change)
+    # Berechnen die höchste Stellenwert
+    y = len(num_to_change) - 1
     result = 0
-    digits_list = []
+    # ein Wörterbuch zuweisen, um die Buchstaben in der umzuwandelnden Zahl durch Zahlen als Ergebnis zu ersetzen
     letters_to_numbers = {'a': 10, 'b': 11, 'c': 12, 'd': 13, 'e': 14, 'f': 15}
+    # ein List zuweisen, um die alle ersetzte Zahlen behalten
+    digits_list = []
+    # die Liste mit Zahlen ausfüllen.
     for n in range(y):
         if num_to_change[n].lower() in letters_to_numbers.keys():
             digits_list.append(letters_to_numbers[num_to_change[n].lower()])
         else:
             digits_list.append(int(num_to_change[n]))
+    # der Zahl laut des Algorithmus umwandeln
     for d in digits_list:
+        result += d * pow(system_base, y)
         y -= 1
-        result += d * pow(x, y)
     return result
 
 
